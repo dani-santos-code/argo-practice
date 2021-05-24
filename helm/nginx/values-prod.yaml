@@ -1,0 +1,22 @@
+namespace:
+  name: "nginx-prod"
+
+imageRegistry: "nginx"
+
+dockerTag: "1.18.0"
+
+pullPolicy:  "IfNotPresent"
+
+replicaCount: 3
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "70m"
+
+service:
+  port: 80
+  type: "ClusterIP"
+
+configmap:
+  data: "version: 1.17.0"

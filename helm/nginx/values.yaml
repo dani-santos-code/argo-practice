@@ -1,0 +1,22 @@
+namespace:
+  name: "nginx-demo"
+
+imageRegistry: "nginx"
+
+dockerTag: "alpine"
+
+pullPolicy:  "IfNotPresent"
+
+replicaCount: 2
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "50m"
+
+service:
+  port: 8111
+  type: "ClusterIP"
+
+configmap:
+  data: "version: alpine"

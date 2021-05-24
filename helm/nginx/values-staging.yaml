@@ -1,0 +1,22 @@
+namespace:
+  name: "nginx-staging"
+
+imageRegistry: "nginx"
+
+dockerTag: "1.17.0"
+
+pullPolicy:  "IfNotPresent"
+
+replicaCount: 1
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "50m"
+
+service:
+  port: 8111
+  type: "ClusterIP"
+
+configmap:
+  data: "version: 1.18.0"
