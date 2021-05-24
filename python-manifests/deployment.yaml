@@ -16,7 +16,7 @@ spec:
       maxUnavailable: 25%
     type: RollingUpdate
   template:
-    metadata:
+    metadata:s
       labels:
         app: python-helloworld
     spec:
