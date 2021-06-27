@@ -1,4 +1,3 @@
-# python-hello-world
-test github actions
+# K8s deployment practice
 
-trigger actions
+This project is to practice K8s deployment
